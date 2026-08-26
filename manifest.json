@@ -1,0 +1,17 @@
+{
+  "name": "APK NOVA",
+  "short_name": "APK NOVA",
+  "description": "Download Android apps, fast and simple.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0B0E14",
+  "theme_color": "#0B0E14",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

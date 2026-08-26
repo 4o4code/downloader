@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APK NOVA — Download Android Apps, Fast & Simple</title>
+<meta name="description" content="APK NOVA is a modern Android app marketplace. Browse, search, and download APK files directly — no account required.">
+<meta name="theme-color" content="#0B0E14">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+
+<!-- Open Graph -->
+<meta property="og:title" content="APK NOVA — Download Android Apps, Fast & Simple">
+<meta property="og:description" content="Browse and download Android APK files directly. No account required.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#mainContent">Skip to content</a>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="APK NOVA home">
+      <img src="logo.svg" alt="" width="34" height="34">
+      APK <span class="nova">NOVA</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#latest">Latest Apps</a>
+      <a href="#popular">Popular Apps</a>
+      <a href="#categories">Categories</a>
+    </nav>
+
+    <div class="header-actions">
+      <label class="header-search" for="headerSearchInput">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="headerSearchInput" type="search" placeholder="Search apps…" aria-label="Search apps">
+      </label>
+
+      <button class="icon-btn mobile-search-toggle" id="mobileSearchToggle" type="button" aria-label="Toggle search" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+
+      <div class="theme-toggle-group" role="group" aria-label="Theme">
+        <button type="button" data-theme-choice="system" aria-pressed="true" aria-label="System theme" title="System">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+        </button>
+        <button type="button" data-theme-choice="light" aria-pressed="false" aria-label="Light theme" title="Light">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false" aria-label="Dark theme" title="Dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-search-bar" id="mobileSearchBar">
+    <label class="header-search" for="mobileSearchInputField">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="mobileSearchInputField" type="search" placeholder="Search apps…" aria-label="Search apps" oninput="document.getElementById('headerSearchInput').dispatchEvent ? (document.getElementById('headerSearchInput').value=this.value, document.getElementById('headerSearchInput').dispatchEvent(new Event('input'))) : null">
+    </label>
+  </div>
+</header>
+
+<main id="mainContent">
+
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
+  <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <span class="hero-badge"><span class="dot"></span> Safe &amp; Secure downloads</span>
+      <h1>Download Apps. <span class="grad">Discover More.</span></h1>
+      <p>Explore useful Android applications with fast and simple downloads.</p>
+
+      <div class="hero-search">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="heroSearchInput" type="search" placeholder="Search by app, category, or version…" aria-label="Search apps">
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('latest').scrollIntoView({behavior:'smooth'})">
+          Search Apps
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong id="heroAppCount">6</strong>Apps listed</div>
+        <div><strong>0</strong>Accounts required</div>
+        <div><strong>100%</strong>Direct downloads</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advertisement: Native Banner -->
+  <div class="ad-slot" aria-label="Advertisement">
+    <div class="ad-slot-inner">
+      <span class="ad-slot-label">Advertisement</span>
+      <div class="ad-slot-banner">
+        <div id="container-993db4ca96ab342d59984ecb536b986c"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       LATEST APPS
+  ========================================================= -->
+  <section class="section" id="latest" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-label">Fresh drops</span>
+          <h2>Latest Apps</h2>
+        </div>
+        <span id="resultCount" style="color:var(--muted); font-size:0.88rem;">6 apps available</span>
+      </div>
+
+      <div class="category-bar" id="categoryBar" role="tablist" aria-label="Filter by category"></div>
+
+      <div class="app-grid" id="appGrid" aria-live="polite"></div>
+
+      <div class="empty-state" id="emptyState">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <h3>No apps found</h3>
+        <p>Try a different keyword or choose another category.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advertisement: 320x50 Banner -->
+  <div class="ad-slot" aria-label="Advertisement">
+    <div class="ad-slot-inner">
+      <span class="ad-slot-label">Advertisement</span>
+      <div class="ad-slot-banner" id="bannerAdSlot" style="max-width:320px; min-height:50px;">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '78f7d2349ce9ffab8a355a7cf3bff683',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/78f7d2349ce9ffab8a355a7cf3bff683/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       POPULAR APPS (reuses the same catalog, sorted by name here
+       as a simple stand-in for "popular" since there is no backend
+       to track real download counts)
+  ========================================================= -->
+  <section class="section" id="popular" data-reveal>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-label">Community favorites</span>
+          <h2>Popular Apps</h2>
+        </div>
+      </div>
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:-14px;">
+        Use the search and category filters above — this catalog updates instantly, right in your browser.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SPONSOR / SMARTLINK — clearly separated from downloads
+  ========================================================= -->
+  <section class="section" id="sponsor" data-reveal>
+    <div class="container" style="text-align:center;">
+      <span class="section-label">Sponsor</span>
+      <h2 style="margin:10px 0 10px;">Support APK NOVA</h2>
+      <p style="color:var(--muted); max-width:480px; margin:0 auto 22px;">
+        This link goes to an external sponsor page and is not required to download any APK on this site.
+      </p>
+      <a class="btn btn-ghost" href="https://www.profitableratecpmnetwork.com/r4msrw6a?key=62c58ca7ab8fdce1fe47c032aede4464" target="_blank" rel="noopener noreferrer sponsored">
+        Visit Sponsor
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <img src="logo.svg" alt="" width="34" height="34">
+          APK <span class="nova">NOVA</span>
+        </a>
+        <p>A simple, modern Android app marketplace. Direct downloads, no account required.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <button type="button" data-open-modal="aboutModal">About</button>
+          <button type="button" data-open-modal="contactModal">Contact</button>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <button type="button" data-open-modal="privacyModal">Privacy Policy</button>
+          <button type="button" data-open-modal="termsModal">Terms</button>
+          <button type="button" data-open-modal="disclaimerModal">Disclaimer</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 APK NOVA. All rights reserved.</span>
+      <span>Built for GitHub Pages — no server required.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     APP DETAILS MODAL
+========================================================= -->
+<div class="modal-overlay" id="detailsModal" role="dialog" aria-modal="true" aria-label="App details" aria-hidden="true">
+  <div class="modal" id="detailsModalBody"></div>
+</div>
+
+<!-- =========================================================
+     LEGAL / INFO MODALS
+========================================================= -->
+<div class="modal-overlay" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle" aria-hidden="true">
+  <div class="modal modal-legal">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Close dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3 id="aboutTitle">About APK NOVA</h3>
+    <p>APK NOVA is a static, client-side directory of Android APK files. There is no account system, no backend server, and no database — everything you see is rendered directly in your browser from a simple list of apps.</p>
+    <p>APK NOVA is not affiliated with Google, Android, or any app publisher unless explicitly stated.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle" aria-hidden="true">
+  <div class="modal modal-legal">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Close dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3 id="contactTitle">Contact</h3>
+    <p>Replace this section with your own contact details (email address, form link, or social profile) before publishing.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle" aria-hidden="true">
+  <div class="modal modal-legal">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Close dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3 id="privacyTitle">Privacy Policy</h3>
+    <p>This website runs entirely in your browser. It does not operate a server-side database and does not require you to create an account.</p>
+    <h4>Local storage</h4>
+    <p>Your theme preference (System, Light, or Dark) is saved locally on your device using your browser's <code>localStorage</code>. This information never leaves your device.</p>
+    <h4>Advertising</h4>
+    <p>This site may display advertisements served by third-party advertising networks. These networks may use cookies, scripts, or similar technologies to display ads. APK NOVA does not control the data practices of third-party advertisers — please review each network's own privacy policy for details.</p>
+    <h4>APK files</h4>
+    <p>APK downloads are served as static files from this site and are not tracked by any download counter or analytics API.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle" aria-hidden="true">
+  <div class="modal modal-legal">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Close dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3 id="termsTitle">Terms of Use</h3>
+    <p>By using this website, you agree to download and use APK files at your own discretion. Always review app permissions before installing any application on your device.</p>
+    <p>This site is provided "as is" without warranties of any kind. Replace this placeholder text with your own terms before publishing.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="disclaimerModal" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle" aria-hidden="true">
+  <div class="modal modal-legal">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Close dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3 id="disclaimerTitle">Disclaimer</h3>
+    <p>APK NOVA is an independent Android app directory and is not officially affiliated with, endorsed by, or connected to Google, Android, or Google Play in any way.</p>
+    <p>Only distribute APK files on this site that you own, have created, or have explicit permission or rights to distribute. The site owner is responsible for ensuring every listed file complies with applicable laws and the original developer's licensing terms.</p>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+  <span id="toastMessage">Download started</span>
+</div>
+
+<script src="script.js"></script>
+
+<!-- =========================================================
+     ADVERTISEMENT SCRIPTS
+     Kept isolated at the end of <body> as requested.
+     These load the ad networks' own scripts unmodified.
+========================================================= -->
+
+<!-- Advertisement: Social Bar -->
+<script src="https://pl31032455.profitableratecpmnetwork.com/a2/5f/31/a25f314a2a3e7f8ee40407b83333c55d.js"></script>
+
+<!-- Advertisement: Popunder -->
+<script src="https://pl31032457.profitableratecpmnetwork.com/6f/8d/1f/6f8d1f9da7817f11907e50b635bc3c78.js"></script>
+
+<!-- Advertisement: Native Banner (loads once, targets both container divs above) -->
+<script async="async" data-cfasync="false" src="https://pl31032458.profitableratecpmnetwork.com/993db4ca96ab342d59984ecb536b986c/invoke.js"></script>
+
+</body>
+</html>
